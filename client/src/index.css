@@ -1,0 +1,13 @@
+@import "./normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@400;500&display=swap");
+
+/* font-family: "Roboto", sans-serif; */
+
+
+/* utilitY classes */
+.content{
+    max-width: 1600px;
+    margin: 0px auto;
+}
+
+

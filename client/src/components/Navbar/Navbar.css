@@ -1,0 +1,55 @@
+@import "../../index.css";
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;`
+    align-items: center;
+    padding: .5rem 3vw;
+}
+/* left */ 
+
+.leftNavContainer, a{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+a span{
+    font-weight: 400;
+    color: 5E6268;
+    font-size: 22px;
+    opacity: .8;
+}
+
+/* Middle */
+.midNavContainer{
+    flex: 0 1 45%;    
+}
+
+.searchBox{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 10px;
+}
+
+.searchBox:active{
+    border: 1px saddlebrown solid;
+
+}
+
+.midNavContainer input[type="text"]{
+    border: none;
+    opacity: 0.7;
+    outline: 0;
+    padding-left: 10px;
+}
+
+/* right */
+.rightNavContainer{
+    display: flex;
+    justify-content: space-around;
+    gap: clamp(2em, 2vw, 3em);
+    flex: 0 1 20%;
+}
