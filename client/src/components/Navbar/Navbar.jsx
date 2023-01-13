@@ -1,15 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Navbar.css";
 import { IconContext } from "react-icons";
 import { MdSearch, MdHelpOutline, MdSettings, MdMenu } from "react-icons/md";
 import { TbGridDots } from "react-icons/tb";
 import img from "../../assets/logo.png";
+import { useField } from "../../hooks";
+import { useSelector, useDispatch } from "react-redux";
+import { setToggle } from "../../reducers/togglingReducers";
 
 const Navbar = () => {
-  const [search, setSearch] = useState(null);
+  const search = useField();
+  const toggler = useSelector((state) => state.toggler);
+  const dispatch = useDispatch();
 
-  const handleSearch = (e) => {
-    setSearch(e.target.value);
+  const { toggle } = toggler[toggler.length - 1];
+
+  const handleToggle = () => {
+    dispatch(setToggle(toggle ? false : true));
   };
 
   return (
@@ -17,7 +24,9 @@ const Navbar = () => {
       <div className="content">
         <div className="wrapper">
           <div className="leftNavContainer">
-            <MdMenu size={'1.5em'}/>
+            <div onClick={handleToggle}>
+              <MdMenu size={"1.5em"} />
+            </div>
             <a>
               <img src={img} alt="C" />
               <span>Contacts</span>
@@ -26,9 +35,12 @@ const Navbar = () => {
 
           <div className="midNavContainer">
             <div className="searchBox">
-              <MdSearch size={'1.5em'}></MdSearch>
-              <input type="text" placeholder="Search" onChange={handleSearch} />
-              {search}
+              <MdSearch size={"1.5em"}></MdSearch>
+              <input
+                type={search.type}
+                placeholder="Search"
+                onChange={search.onChange}
+              />
             </div>
           </div>
 

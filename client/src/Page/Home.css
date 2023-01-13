@@ -1,0 +1,13 @@
+
+
+.home-wrapper {
+	display: grid;
+	width: 100%;
+	grid-template: none / repeat(12,1fr);
+	background-color: firebrick;
+}
+
+.sidebar-wrapper {
+	grid-column: 1/4;
+	background-color: aquamarine;
+}
