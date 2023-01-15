@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Navbar from "../components/Navbar/Navbar";
 import Sidebar from "../components/Sidebar/Sidebar";
+import { Outlet } from "react-router";
 import './Home.css'
 
 const Home = () => {
@@ -19,7 +20,7 @@ const Home = () => {
           <Sidebar />
         </div> : null}
         <div className="main-wrapper">
-        fl;'sd'
+          <Outlet></Outlet>
         </div>
       </div>
     </div>

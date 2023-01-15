@@ -1,13 +1,25 @@
 
-
+.container{
+	position: relative;
+}
 .home-wrapper {
 	display: grid;
 	width: 100%;
-	grid-template: none / repeat(12,1fr);
+	grid-template: 1fr / repeat(12,1fr);
 	background-color: firebrick;
 }
 
 .sidebar-wrapper {
 	grid-column: 1/4;
 	background-color: aquamarine;
+}
+
+@media screen and (max-width:1024px) {
+	.sidebar-wrapper{
+		height: 100vh;
+		width: clamp(20vw,30vw,40vw);
+		position: absolute;
+		top: 0;
+	} 
+	
 }
