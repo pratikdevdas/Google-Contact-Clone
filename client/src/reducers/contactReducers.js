@@ -1,22 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialState = [
-  {}
-]
+const initialState = []
 
-const personSlice = createSlice({
-  name: 'person',
+const contactSlice = createSlice({
+  name: 'contact',
   initialState,
   reducers: {
-    setContact(state, action) {
-      const toggle = action.payload
-      state.push({toggle})
+    addContact(state, action) {
+      const contact = action.payload
+      state.push({contact})
     },
-	addPerson(state,action){
-		const addContact = n
-	}
   },
 })
 
-export const { setPerson, addPerson } = personSlice.actions
-export default personSlice.reducer
+export const { addContact } = contactSlice.actions
+export default contactSlice.reducer

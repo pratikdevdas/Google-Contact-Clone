@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Contact = () => {
+const Contact = ({key}) => {
   return (
-	<div>Single Contact Route</div>
+	<div key></div>
   )
 }
 

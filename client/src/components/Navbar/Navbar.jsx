@@ -37,6 +37,7 @@ const Navbar = () => {
             <div className="searchBox">
               <MdSearch size={"1.5em"}></MdSearch>
               <input
+              name={search.name}
                 type={search.type}
                 placeholder="Search"
                 onChange={search.onChange}

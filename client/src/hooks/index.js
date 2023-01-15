@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-export const useField = (type) => {
+// although we are using forms for
+export const useField = (type, name) => {
   const [value, setValue] = useState("");
 
   const onChange = ({ target }) => {
@@ -8,6 +9,7 @@ export const useField = (type) => {
   };
 
   return {
+    name,
     value,
     type,
     onChange,
