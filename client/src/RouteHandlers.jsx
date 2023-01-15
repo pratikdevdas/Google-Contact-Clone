@@ -1,6 +1,6 @@
 import {createBrowserRouter } from 'react-router-dom'
-import Home from './Page/Home'
-import ContactPage from './Page/ContactPage'
+import Home from './Pages/Home'
+import ContactPage from './Pages/ContactPage'
 import ContactForm from './components/Contacts/ContactForm'
 
 export const router = createBrowserRouter([
